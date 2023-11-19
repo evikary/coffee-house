@@ -285,4 +285,62 @@ h3 {
   border-radius: 20px;
 }
 
+.app {
+  padding: 100px 0;
+  background: #E1D4C9;
+}
+
+.app__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 100px;
+}
+
+.container-text {
+  width: 630px;
+}
+
+.app-title {
+  text-align: start;
+}
+
+.app-text {
+  margin: 40px 0;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.app-box {
+  display: flex;
+  column-gap: 20px;
+}
+
+.app-store {
+  display: inline-block;
+  width: 200px;
+  height: 64px;
+  background-image: url("../assets/app/app-store.png");
+  background-size: cover;
+}
+
+.google-play {
+  display: inline-block;
+  width: 200px;
+  height: 64px;
+  background-image: url("../assets/app/google-play.png");
+  background-size: cover;
+}
+
+.container-image {
+  width: 630px;
+  height: 630px;
+  background-image: url(../assets/app/mobile-screens.png);
+  background-size: cover;
+}
+
 /*# sourceMappingURL=style.css.map */
