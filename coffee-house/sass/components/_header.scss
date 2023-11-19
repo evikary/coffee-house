@@ -1,0 +1,44 @@
+.header {
+    padding-top: 20px;
+    background: $color-bg-body;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 60px;
+    display: inline-block;
+    background: url(../assets/header/logo.svg);
+}
+
+.header-navigation {
+    margin: auto;
+}
+
+.navigation {
+    display: flex;
+    column-gap: 40px;
+    list-style-type: none;
+}
+
+.link-menu {
+    margin-top: 16px;
+    width: 72px;
+    height: 24px;
+    display: inline-block;
+    background: url(../assets/header/link.svg);
+}
+
+.navigation-links {
+    color: $color-text-dark;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    text-decoration: none;
+}

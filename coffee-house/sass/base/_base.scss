@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: $color-text-light;
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%;
+
+    span {
+        color: $color-text-accent;
+        font-style: italic;
+    }
+}
+
+h2 {
+    color: $color-text-dark;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+
+    span {
+        color: $color-text-accent;
+        font-style: italic;
+    }
+}
+
+h3 {
+    color: $color-text-dark;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}

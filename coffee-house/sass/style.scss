@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2'), url('../fonts/Inter-Regular.woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Italic.woff2'), url('../fonts/Inter-Italic.woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2'), url('../fonts/Inter-Medium.woff');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-MediumItalic.woff2'), url('../fonts/Inter-MediumItalic.woff');
+    font-weight: 600;
+    font-display: swap;
+    font-style: italic;
+}
+
+// abstracts
+@import "abstracts/constants";
+
+// layouts
+@import "layouts/wrapper";
+
+// base
+@import "base/base";
+
+// components
+@import "components/header";
+@import "components/enjoy";
+@import "components/favorites";
+@import "components/about";
