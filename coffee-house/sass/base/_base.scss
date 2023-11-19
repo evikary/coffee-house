@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     color: $color-text-light;
     font-family: 'Inter', sans-serif;
     font-size: 72px;
     font-style: normal;
     font-weight: 600;
+    letter-spacing: .5px;
     line-height: 105%;
 
     span {
@@ -20,7 +25,6 @@ h1 {
 
 h2 {
     color: $color-text-dark;
-    text-align: center;
     font-family: 'Inter', sans-serif;
     font-size: 60px;
     font-style: normal;

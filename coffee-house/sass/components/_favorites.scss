@@ -3,15 +3,27 @@
     background: $color-bg-body;
 }
 
-.container-favourites {
+.favorites__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.container-favourites-content {
-    width: 1152px;
+.favourites__slider {
     margin-top: 40px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.favorites__title {
+    letter-spacing: .3px;
+}
+
+.favourites__slide {
+    width: 1152px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +35,7 @@
     height: 480px;
 }
 
-.favourites_text {
+.favourites__text {
     margin: 16px 0;
     color: $color-text-dark;
     text-align: center;

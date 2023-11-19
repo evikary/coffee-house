@@ -10,15 +10,16 @@
     column-gap: 100px;
 }
 
-.container-text {
+.app__content {
     width: 630px;
 }
 
-.app-title {
+.app__title {
     text-align: start;
+    letter-spacing: .3px;
 }
 
-.app-text {
+.app__text {
     margin: 40px 0;
     color: $color-text-dark;
     font-family: 'Inter', sans-serif;
@@ -28,7 +29,7 @@
     line-height: 150%;
 }
 
-.app-box {
+.app__btns {
     display: flex;
     column-gap: 20px;
 }
@@ -51,7 +52,7 @@
     cursor: pointer;
 }
 
-.container-image {
+.app__image {
     width: 630px;
     height: 630px;
     background-image: url('../assets/app/mobile-screens.png');

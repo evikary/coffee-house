@@ -3,7 +3,7 @@
     background: $color-bg-body;
 }
 
-.footer-wrapper {
+.footer__wrapper {
     padding: 100px 100px;
     display: flex;
     column-gap: 100px;
@@ -20,6 +20,7 @@
     font-style: italic;
     font-weight: 600;
     line-height: 125%;
+    letter-spacing: .3px;
 
     span {
         color: $color-text-light;
@@ -31,7 +32,7 @@
     }
 }
 
-.footer__box {
+.footer__icons {
     display: flex;
     column-gap: 12px;
 }
@@ -47,14 +48,14 @@
     cursor: pointer;
 }
 
-.ico1 {
+.ico-twitter {
     width: 24px;
     height: 24px;
     display: inline-block;
     background-image: url('../assets/footer/twitter.svg');
 }
 
-.ico2 {
+.ico-instagram {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -62,22 +63,20 @@
     background-size: cover;
 }
 
-.ico3 {
+.ico-facebook {
     width: 24px;
     height: 24px;
     display: inline-block;
     background-image: url('../assets/footer/facebook.svg');
 }
 
-.contaner-contacts {
-    width: 530px;
-    width: 530px;
+.footer__contacts {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.contacts {
+.footer__text {
     margin-bottom: 40px;
     color: $color-text-light;
     font-family: 'Inter', sans-serif;
@@ -87,7 +86,7 @@
     line-height: 125%;
 }
 
-.contacts-box {
+.footer__box {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
@@ -101,9 +100,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
+    letter-spacing: .1px;
 }
 
-.contact-ico1 {
+.ico-pin {
     margin-right: 8px;
     width: 20px;
     height: 20px;
@@ -121,7 +121,7 @@
     text-decoration: none;
 }
 
-.contact-ico2 {
+.ico-tel {
     margin-right: 8px;
     width: 20px;
     height: 20px;
@@ -129,7 +129,7 @@
     background-image: url('../assets/footer/phone.svg')
 }
 
-.contact-ico3 {
+.ico-clock {
     margin-right: 8px;
     width: 20px;
     height: 20px;
