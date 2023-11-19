@@ -40,7 +40,12 @@
     height: 64px;
     background-image: url('../assets/app/app-store.png');
     background-size: cover;
+    @extend %transition;
     cursor: pointer;
+}
+
+.app-store:hover {
+    background-image: url('../assets/app/app-store-hover.png');
 }
 
 .google-play {
@@ -49,7 +54,12 @@
     height: 64px;
     background-image: url('../assets/app/google-play.png');
     background-size: cover;
+    @extend %transition;
     cursor: pointer;
+}
+
+.google-play:hover {
+    background-image: url('../assets/app/google-play-hover.png');
 }
 
 .app__image {

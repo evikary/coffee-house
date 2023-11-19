@@ -25,15 +25,35 @@
     list-style-type: none;
 }
 
-.link-menu {
+.header__menu-link {
+    padding-bottom: 2px;
+    display: flex;
     margin-top: 16px;
-    width: 72px;
-    height: 24px;
+    color: $color-text-dark;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    @extend %transition;
+}
+
+.cup {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
-    background: url(../assets/header/link.svg);
+    background-image: url('../assets/header/coffee-cup.svg')
+}
+
+.header__menu-link:hover {
+    border-bottom: 2px solid $color-text-dark;
 }
 
 .navigation__links {
+    padding-bottom: 2px;
     color: $color-text-dark;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -42,4 +62,10 @@
     line-height: 150%;
     letter-spacing: 0.16px;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    @extend %transition;
+}
+
+.navigation__links:hover {
+    border-bottom: 2px solid $color-text-dark;
 }
