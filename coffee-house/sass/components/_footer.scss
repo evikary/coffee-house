@@ -37,37 +37,61 @@
     column-gap: 12px;
 }
 
-.btn-ico {
+.icon-twitter {
     width: 60px;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url('../assets/footer/twitter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 100px;
     border: 1px solid $color-border-light;
-    cursor: pointer;
+    @extend %transition;
 }
 
-.ico-twitter {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    background-image: url('../assets/footer/twitter.svg');
+.icon-twitter:hover {
+    border: 1px solid $color-bg-body;
+    background: $color-bg-body;
+    background-image: url('../assets/footer/twitter-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.ico-instagram {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
+.icon-instagram {
+    width: 60px;
+    height: 60px;
     background-image: url('../assets/footer/instagram.svg');
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100px;
+    border: 1px solid $color-border-light;
+    @extend %transition;
 }
 
-.ico-facebook {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
+.icon-instagram:hover {
+    border: 1px solid $color-bg-body;
+    background: $color-bg-body;
+    background-image: url('../assets/footer/instagram-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-facebook {
+    width: 60px;
+    height: 60px;
     background-image: url('../assets/footer/facebook.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100px;
+    border: 1px solid $color-border-light;
+    @extend %transition;
+}
+
+.icon-facebook:hover {
+    border: 1px solid $color-bg-body;
+    background: $color-bg-body;
+    background-image: url('../assets/footer/facebook-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .footer__contacts {

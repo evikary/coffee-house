@@ -28,16 +28,30 @@
     line-height: 150%;
 }
 
-.enjoy__btn {
-    padding: 20px 78px;
+.enjoy__button {
+    width: 200px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 100px;
     background: $color-bg-body;
     color: $color-text-dark;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
     border: none;
+    text-decoration: none;
+    @extend %transition;
     cursor: pointer;
+}
+
+.enjoy__button .cup {
+    display: none;
+}
+
+.enjoy__button:hover .cup {
+    display: inline-block;
 }
