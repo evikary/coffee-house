@@ -7,3 +7,115 @@
     margin-bottom: 40px;
     text-align: center;
 }
+
+.menu__list {
+    width: 361px;
+    margin: auto;
+}
+
+.list {
+    display: flex;
+    column-gap: 16px;
+    list-style-type: none;
+}
+
+.menu__drink {}
+
+.drink {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-dark;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    border-radius: 100px;
+    border: 1px solid $color-border-light;
+    text-decoration: none;
+    @extend %transition;
+
+
+    &_active {
+        color: $color-text-light;
+        background: $color-bg-container;
+        border: 1px solid $color-bg-container;
+        cursor: initial;
+    }
+}
+
+.drink:hover {
+    color: $color-text-light;
+    background: $color-bg-container;
+    border: 1px solid $color-bg-container;
+}
+
+.coffee {
+    padding: 3px 7px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: $color-border-light;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    @extend %transition;
+
+    &_active {
+        background-color: $color-bg-body;
+    }
+}
+
+.drink:hover .coffee {
+    background-color: $color-bg-body;
+}
+
+.tea {
+    padding: 3px 7px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: $color-border-light;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    @extend %transition;
+
+}
+
+.drink:hover .tea {
+    background-color: $color-bg-body;
+}
+
+.dessert {
+    padding: 3px 7px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: $color-border-light;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    @extend %transition;
+}
+
+.drink:hover .dessert {
+    background-color: $color-bg-body;
+}

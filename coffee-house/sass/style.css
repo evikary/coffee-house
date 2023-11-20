@@ -26,7 +26,7 @@
   font-display: swap;
   font-style: italic;
 }
-.tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
+.dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
   transition: all 0.3s;
 }
 
@@ -634,8 +634,106 @@ h3 {
   text-align: center;
 }
 
-.menu__navigation {
+.menu__list {
+  width: 361px;
   margin: auto;
+}
+
+.list {
+  display: flex;
+  column-gap: 16px;
+  list-style-type: none;
+}
+
+.drink {
+  padding: 8px 16px 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  border-radius: 100px;
+  border: 1px solid #C1B6AD;
+  text-decoration: none;
+}
+.drink_active {
+  color: #E1D4C9;
+  background: #665F55;
+  border: 1px solid #665F55;
+  cursor: initial;
+}
+
+.drink:hover {
+  color: #E1D4C9;
+  background: #665F55;
+  border: 1px solid #665F55;
+}
+
+.coffee {
+  padding: 3px 7px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #C1B6AD;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+.coffee_active {
+  background-color: #E1D4C9;
+}
+
+.drink:hover .coffee {
+  background-color: #E1D4C9;
+}
+
+.tea {
+  padding: 3px 7px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #C1B6AD;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.drink:hover .tea {
+  background-color: #E1D4C9;
+}
+
+.dessert {
+  padding: 3px 7px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #C1B6AD;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.drink:hover .dessert {
+  background-color: #E1D4C9;
 }
 
 /*# sourceMappingURL=style.css.map */
