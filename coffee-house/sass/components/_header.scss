@@ -69,3 +69,11 @@
 .navigation__links:hover {
     border-bottom: 2px solid $color-text-dark;
 }
+
+.header__menu-item {
+    margin-top: 16px;
+    display: inline-block;
+    width: 72px;
+    height: 28px;
+    background-image: url('../assets/header/menu-item.svg');
+}

@@ -26,7 +26,7 @@
   font-display: swap;
   font-style: italic;
 }
-.dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
+.image8, .image7, .image6, .image5, .image4, .image3, .image2, .image1, .dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
   transition: all 0.3s;
 }
 
@@ -151,6 +151,14 @@ h3 {
 
 .navigation__links:hover {
   border-bottom: 2px solid #403F3D;
+}
+
+.header__menu-item {
+  margin-top: 16px;
+  display: inline-block;
+  width: 72px;
+  height: 28px;
+  background-image: url("../assets/header/menu-item.svg");
 }
 
 .enjoy {
@@ -635,6 +643,7 @@ h3 {
 }
 
 .menu__list {
+  padding-bottom: 40px;
   width: 361px;
   margin: auto;
 }
@@ -664,7 +673,7 @@ h3 {
   color: #E1D4C9;
   background: #665F55;
   border: 1px solid #665F55;
-  cursor: initial;
+  cursor: default;
 }
 
 .drink:hover {
@@ -734,6 +743,145 @@ h3 {
 
 .drink:hover .dessert {
   background-color: #E1D4C9;
+}
+
+.menu__grig-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 505px 505px;
+  gap: 40px;
+}
+
+.menu__card {
+  border: 1px solid #C1B6AD;
+  border-radius: 40px;
+}
+
+.image1 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-1.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image1 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image2 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-2.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image2 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image3 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-3.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image3 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image4 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-4.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image4 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image5 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-5.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image5 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image6 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-6.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image6 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image7 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-7.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image7 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.image8 {
+  height: 310px;
+  background-image: url("../assets/menu/coffee-8.jpg");
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.menu__card:hover .image8 {
+  background-size: calc(340px - 10%) calc(340px - 10%);
+}
+
+.menu__text-content {
+  height: 196px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content__title {
+  text-align: start;
+}
+
+.text-content__text {
+  margin: 12px 0;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.price {
+  margin-top: auto;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
 }
 
 /*# sourceMappingURL=style.css.map */
