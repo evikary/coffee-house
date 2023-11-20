@@ -624,4 +624,18 @@ h3 {
   background-image: url("../assets/footer/clock.svg");
 }
 
+.menu {
+  padding: 20px 0 100px 0;
+  background: #E1D4C9;
+}
+
+.menu__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.menu__navigation {
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
