@@ -21,11 +21,7 @@
 .enjoy__text {
     padding: 40px 0;
     color: $color-text-light;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 400);
 }
 
 .enjoy__button {
@@ -37,11 +33,7 @@
     border-radius: 100px;
     background: $color-bg-body;
     color: $color-text-dark;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 600);
     border: none;
     text-decoration: none;
     @extend %transition;
@@ -49,9 +41,13 @@
 }
 
 .enjoy__button .cup {
-    display: none;
+    margin-left: -18px;
+    opacity: 0;
+    transition: 1s;
 }
 
 .enjoy__button:hover .cup {
-    display: inline-block;
+    margin-left: 8px;
+    opacity: 1;
+    transition: 1s;
 }

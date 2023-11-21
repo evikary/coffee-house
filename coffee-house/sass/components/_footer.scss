@@ -15,20 +15,12 @@
     width: 530px;
     margin-bottom: 40px;
     color: $color-text-accent;
-    font-family: 'Inter', sans-serif;
-    font-size: 60px;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 125%;
+    @include font(60px, 125%, italic, 600);
     letter-spacing: .3px;
 
     span {
         color: $color-text-light;
-        font-family: 'Inter', sans-serif;
-        font-size: 60px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 125%;
+        @include font(60px, 125%, normal, 600);
     }
 }
 
@@ -41,8 +33,7 @@
     width: 60px;
     height: 60px;
     background-image: url('../assets/footer/twitter.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
     border-radius: 100px;
     border: 1px solid $color-border-light;
     @extend %transition;
@@ -52,16 +43,14 @@
     border: 1px solid $color-bg-body;
     background: $color-bg-body;
     background-image: url('../assets/footer/twitter-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
 }
 
 .icon-instagram {
     width: 60px;
     height: 60px;
     background-image: url('../assets/footer/instagram.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
     border-radius: 100px;
     border: 1px solid $color-border-light;
     @extend %transition;
@@ -71,16 +60,14 @@
     border: 1px solid $color-bg-body;
     background: $color-bg-body;
     background-image: url('../assets/footer/instagram-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
 }
 
 .icon-facebook {
     width: 60px;
     height: 60px;
     background-image: url('../assets/footer/facebook.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
     border-radius: 100px;
     border: 1px solid $color-border-light;
     @extend %transition;
@@ -90,8 +77,7 @@
     border: 1px solid $color-bg-body;
     background: $color-bg-body;
     background-image: url('../assets/footer/facebook-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
 }
 
 .footer__contacts {
@@ -103,11 +89,7 @@
 .footer__text {
     margin-bottom: 40px;
     color: $color-text-light;
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
+    @include font(24px, 125%, normal, 600);
 }
 
 .footer__box {
@@ -119,11 +101,7 @@
 .contact {
     display: flex;
     color: $color-text-light;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 600);
     letter-spacing: .1px;
     list-style-type: none;
 }

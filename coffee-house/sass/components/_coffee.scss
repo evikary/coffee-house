@@ -6,6 +6,7 @@
 .menu__title {
     margin-bottom: 40px;
     text-align: center;
+    letter-spacing: .3px;
 }
 
 .menu__list {
@@ -21,19 +22,15 @@
 }
 
 .drink {
-    padding: 8px 16px 8px 8px;
+    padding: 7px 15px 7px 7px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $color-text-dark;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
     border-radius: 100px;
     border: 1px solid $color-border-light;
     text-decoration: none;
+    @include font(16px, 150%, normal, 600);
     @extend %transition;
 
 
@@ -60,11 +57,7 @@
     border-radius: 100px;
     background-color: $color-border-light;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 600);
     @extend %transition;
 
     &_active {
@@ -85,11 +78,7 @@
     border-radius: 100px;
     background-color: $color-border-light;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 600);
     @extend %transition;
 
 }
@@ -107,11 +96,7 @@
     border-radius: 100px;
     background-color: $color-border-light;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 600);
     @extend %transition;
 }
 
@@ -132,11 +117,8 @@
 }
 
 .image1 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-1.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -145,11 +127,8 @@
 }
 
 .image2 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-2.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -158,11 +137,8 @@
 }
 
 .image3 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-3.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -171,11 +147,8 @@
 }
 
 .image4 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-4.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -184,11 +157,8 @@
 }
 
 .image5 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-5.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -197,11 +167,8 @@
 }
 
 .image6 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-6.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -210,11 +177,8 @@
 }
 
 .image7 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-7.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -223,11 +187,8 @@
 }
 
 .image8 {
-    height: 310px;
     background-image: url('../assets/menu/coffee-8.jpg');
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+    @include cardImage;
     @extend %transition;
 }
 
@@ -249,19 +210,11 @@
 .text-content__text {
     margin: 12px 0;
     color: $color-text-dark;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 400);
 }
 
 .price {
     margin-top: auto;
     color: $color-text-dark;
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
+    @include font(24px, 125%, normal, 600);
 }

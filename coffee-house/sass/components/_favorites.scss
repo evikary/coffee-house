@@ -38,12 +38,8 @@
 .favourites__text {
     margin: 16px 0;
     color: $color-text-dark;
+    @include font(16px, 150%, normal, 400);
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
 }
 
 .favourites__box {
@@ -66,8 +62,7 @@
     width: 60px;
     height: 60px;
     background-image: url('../assets/favourites/arrow-left.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
     border-radius: 100px;
     border: 1px solid $color-border-dark;
     @extend %transition;
@@ -78,16 +73,14 @@
     border: 1px solid $color-bg-container;
     background: $color-bg-container;
     background-image: url('../assets/favourites/arrow-left-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
 }
 
 .right-arrow {
     width: 60px;
     height: 60px;
     background-image: url('../assets/favourites/arrow-right.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
     border-radius: 100px;
     border: 1px solid $color-border-dark;
     @extend %transition;
@@ -98,6 +91,5 @@
     border: 1px solid $color-bg-container;
     background: $color-bg-container;
     background-image: url('../assets/favourites/arrow-right-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon;
 }

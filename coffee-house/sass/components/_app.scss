@@ -22,11 +22,7 @@
 .app__text {
     margin: 40px 0;
     color: $color-text-dark;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    @include font(16px, 150%, normal, 400);
 }
 
 .app__btns {

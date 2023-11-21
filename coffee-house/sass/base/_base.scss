@@ -10,12 +10,9 @@ html {
 
 h1 {
     color: $color-text-light;
-    font-family: 'Inter', sans-serif;
-    font-size: 72px;
-    font-style: normal;
-    font-weight: 600;
+    @include font(72px, 105%, normal, 600);
     letter-spacing: .5px;
-    line-height: 105%;
+
 
     span {
         color: $color-text-accent;
@@ -25,11 +22,8 @@ h1 {
 
 h2 {
     color: $color-text-dark;
-    font-family: 'Inter', sans-serif;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
+    @include font(60px, 125%, normal, 600);
+
 
     span {
         color: $color-text-accent;
@@ -39,10 +33,6 @@ h2 {
 
 h3 {
     color: $color-text-dark;
+    @include font(24px, 125%, normal, 600);
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
 }
