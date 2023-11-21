@@ -691,7 +691,8 @@ h3 {
   margin-right: 8px;
   width: 30px;
   height: 30px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border-radius: 100px;
   background-color: #C1B6AD;
   text-align: center;
@@ -705,6 +706,11 @@ h3 {
   background-color: #E1D4C9;
 }
 
+.coffee > img {
+  width: 16px;
+  height: auto;
+}
+
 .drink:hover .coffee {
   background-color: #E1D4C9;
 }
@@ -714,7 +720,8 @@ h3 {
   margin-right: 8px;
   width: 30px;
   height: 30px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border-radius: 100px;
   background-color: #C1B6AD;
   text-align: center;
@@ -723,6 +730,11 @@ h3 {
   font-style: normal;
   font-weight: 600;
   font-family: "Inter", sans-serif;
+}
+
+.tea > img {
+  width: 16px;
+  height: auto;
 }
 
 .drink:hover .tea {
@@ -734,7 +746,8 @@ h3 {
   margin-right: 8px;
   width: 30px;
   height: 30px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border-radius: 100px;
   background-color: #C1B6AD;
   text-align: center;
@@ -743,6 +756,11 @@ h3 {
   font-style: normal;
   font-weight: 600;
   font-family: "Inter", sans-serif;
+}
+
+.dessert > img {
+  width: 16px;
+  height: auto;
 }
 
 .drink:hover .dessert {

@@ -53,7 +53,8 @@
     margin-right: 8px;
     width: 30px;
     height: 30px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border-radius: 100px;
     background-color: $color-border-light;
     text-align: center;
@@ -65,6 +66,11 @@
     }
 }
 
+.coffee>img {
+    width: 16px;
+    height: auto;
+}
+
 .drink:hover .coffee {
     background-color: $color-bg-body;
 }
@@ -74,13 +80,19 @@
     margin-right: 8px;
     width: 30px;
     height: 30px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border-radius: 100px;
     background-color: $color-border-light;
     text-align: center;
     @include font(16px, 150%, normal, 600);
     @extend %transition;
 
+}
+
+.tea>img {
+    width: 16px;
+    height: auto;
 }
 
 .drink:hover .tea {
@@ -92,12 +104,18 @@
     margin-right: 8px;
     width: 30px;
     height: 30px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border-radius: 100px;
     background-color: $color-border-light;
     text-align: center;
     @include font(16px, 150%, normal, 600);
     @extend %transition;
+}
+
+.dessert>img {
+    width: 16px;
+    height: auto;
 }
 
 .drink:hover .dessert {
