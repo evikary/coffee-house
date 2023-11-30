@@ -1,66 +1,100 @@
 .app {
-    padding: 100px 0;
-    background: $color-bg-body;
+  padding: 100px 0;
+  background: $color-bg-body;
 }
 
 .app__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 100px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 100px;
+
+  @include media-laptop {
+    column-gap: 6%;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 100px;
+  }
 }
 
 .app__content {
+  width: 630px;
+  flex-grow: 1;
+
+  @media (max-width: $tablet-width) {
     width: 630px;
+  }
 }
 
 .app__title {
-    text-align: start;
-    letter-spacing: .3px;
+  text-align: start;
+  letter-spacing: 0.3px;
 }
 
 .app__text {
-    margin: 40px 0;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 400);
+  margin: 40px 0;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 400);
 }
 
 .app__btns {
-    display: flex;
-    column-gap: 20px;
+  display: flex;
+  column-gap: 20px;
 }
 
 .app-store {
-    display: inline-block;
-    width: 200px;
-    height: 64px;
-    background-image: url('../assets/app/app-store.png');
-    background-size: cover;
-    @extend %transition;
-    cursor: pointer;
+  display: inline-block;
+  width: 200px;
+  height: 64px;
+  background-image: url("../assets/app/app-store.png");
+  background-size: cover;
+  @extend %transition;
+  cursor: pointer;
 }
 
 .app-store:hover {
-    background-image: url('../assets/app/app-store-hover.png');
+  background-image: url("../assets/app/app-store-hover.png");
+
+  @include media-laptop {
+    background-image: url("../assets/app/app-store.png");
+  }
 }
 
 .google-play {
-    display: inline-block;
-    width: 200px;
-    height: 64px;
-    background-image: url('../assets/app/google-play.png');
-    background-size: cover;
-    @extend %transition;
-    cursor: pointer;
+  display: inline-block;
+  width: 200px;
+  height: 64px;
+  background-image: url("../assets/app/google-play.png");
+  background-size: cover;
+  @extend %transition;
+  cursor: pointer;
 }
 
 .google-play:hover {
-    background-image: url('../assets/app/google-play-hover.png');
+  background-image: url("../assets/app/google-play-hover.png");
+
+  @include media-laptop {
+    background-image: url("../assets/app/google-play.png");
+  }
 }
 
 .app__image {
+  flex-grow: 1;
+  width: 630px;
+  height: 630px;
+  background-image: url("../assets/app/mobile-screens.png");
+  background-size: cover;
+
+  @include media-laptop {
+    width: 47%;
+  }
+
+  @media (max-width: $tablet-width) {
     width: 630px;
-    height: 630px;
-    background-image: url('../assets/app/mobile-screens.png');
-    background-size: cover;
+  }
 }

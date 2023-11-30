@@ -1,157 +1,216 @@
 .footer {
-    padding-bottom: 40px;
-    background: $color-bg-body;
+  padding-bottom: 40px;
+  background: $color-bg-body;
 }
 
 .footer__wrapper {
-    padding: 100px 100px;
-    display: flex;
-    column-gap: 100px;
-    background-color: $color-bg-container;
-    border-radius: 40px;
+  width: 100%;
+  padding: 100px 100px;
+  display: flex;
+  column-gap: 100px;
+  background-color: $color-bg-container;
+  border-radius: 40px;
+
+  @include media-laptop {
+    column-gap: 8%;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 100px;
+  }
+}
+
+.footer__content {
+  flex-basis: 630px;
+  flex-shrink: 1;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    flex-basis: unset;
+  }
 }
 
 .footer__title {
-    width: 530px;
-    margin-bottom: 40px;
-    color: $color-text-accent;
-    @include font(60px, 125%, italic, 600);
-    letter-spacing: .3px;
+  margin-bottom: 40px;
+  color: $color-text-accent;
+  @include font(60px, 125%, italic, 600);
+  letter-spacing: 0.3px;
 
-    span {
-        color: $color-text-light;
-        @include font(60px, 125%, normal, 600);
-    }
+  span {
+    color: $color-text-light;
+    @include font(60px, 125%, normal, 600);
+  }
+
+  @include media-laptop {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .footer__icons {
-    display: flex;
-    column-gap: 12px;
+  flex-shrink: 2;
+  display: flex;
+  column-gap: 12px;
 }
 
 .icon-twitter {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/footer/twitter.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-light;
-    @extend %transition;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/footer/twitter.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-light;
+  @extend %transition;
 }
 
 .icon-twitter:hover {
-    border: 1px solid $color-bg-body;
-    background: $color-bg-body;
-    background-image: url('../assets/footer/twitter-hover.svg');
+  border: 1px solid $color-bg-body;
+  background: $color-bg-body;
+  background-image: url("../assets/footer/twitter-hover.svg");
+  @include icon;
+
+  @include media-laptop {
+    border: 1px solid $color-border-light;
+    background: transparent;
+    background-image: url("../assets/footer/twitter.svg");
     @include icon;
+  }
 }
 
 .icon-instagram {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/footer/instagram.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-light;
-    @extend %transition;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/footer/instagram.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-light;
+  @extend %transition;
 }
 
 .icon-instagram:hover {
-    border: 1px solid $color-bg-body;
-    background: $color-bg-body;
-    background-image: url('../assets/footer/instagram-hover.svg');
+  border: 1px solid $color-bg-body;
+  background: $color-bg-body;
+  background-image: url("../assets/footer/instagram-hover.svg");
+  @include icon;
+
+  @include media-laptop {
+    border: 1px solid $color-border-light;
+    background: transparent;
+    background-image: url("../assets/footer/instagram.svg");
     @include icon;
+  }
 }
 
 .icon-facebook {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/footer/facebook.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-light;
-    @extend %transition;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/footer/facebook.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-light;
+  @extend %transition;
 }
 
 .icon-facebook:hover {
-    border: 1px solid $color-bg-body;
-    background: $color-bg-body;
-    background-image: url('../assets/footer/facebook-hover.svg');
+  border: 1px solid $color-bg-body;
+  background: $color-bg-body;
+  background-image: url("../assets/footer/facebook-hover.svg");
+  @include icon;
+
+  @include media-laptop {
+    border: 1px solid $color-border-light;
+    background: transparent;
+    background-image: url("../assets/footer/facebook.svg");
     @include icon;
+  }
 }
 
 .footer__contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media-laptop {
+  }
 }
 
 .footer__text {
-    margin-bottom: 40px;
-    color: $color-text-light;
-    @include font(24px, 125%, normal, 600);
+  margin-bottom: 40px;
+  color: $color-text-light;
+  @include font(24px, 125%, normal, 600);
 }
 
 .footer__box {
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 }
 
 .contact {
-    display: flex;
-    color: $color-text-light;
-    @include font(16px, 150%, normal, 600);
-    letter-spacing: .1px;
-    list-style-type: none;
+  display: flex;
+  color: $color-text-light;
+  @include font(16px, 150%, normal, 600);
+  letter-spacing: 0.1px;
+  list-style-type: none;
 }
 
 .ico-pin {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-image: url('../assets/footer/pin-alt.svg')
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("../assets/footer/pin-alt.svg");
 }
 
 .map-link {
-    display: flex;
-    padding-bottom: 2px;
-    color: $color-text-light;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    @extend %transition;
+  display: flex;
+  padding-bottom: 2px;
+  color: $color-text-light;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  @extend %transition;
 }
 
 .map-link:hover {
-    border-bottom: 2px solid $color-text-light;
+  border-bottom: 2px solid $color-text-light;
+
+  @include media-laptop {
+    border-bottom: 2px solid transparent;
+  }
 }
 
 .tel {
-    display: flex;
-    padding-bottom: 2px;
-    color: $color-text-light;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    @extend %transition;
+  display: flex;
+  padding-bottom: 2px;
+  color: $color-text-light;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  @extend %transition;
 }
 
 .tel:hover {
-    border-bottom: 2px solid $color-text-light;
+  border-bottom: 2px solid $color-text-light;
+
+  @include media-laptop {
+    border-bottom: 2px solid transparent;
+  }
 }
 
 .ico-tel {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-image: url('../assets/footer/phone.svg')
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("../assets/footer/phone.svg");
 }
 
 .ico-clock {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-image: url('../assets/footer/clock.svg')
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("../assets/footer/clock.svg");
 }

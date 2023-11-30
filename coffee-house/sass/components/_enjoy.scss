@@ -1,53 +1,66 @@
 .enjoy {
-    padding-top: 20px;
-    background: $color-bg-body;
+  padding-top: 20px;
+  background: $color-bg-body;
 }
 
 .enjoy__bg {
-    padding: 100px 100px;
-    width: 100%;
-    height: 644px;
-    background-image: url('../assets/enjoy/enjoy-bg.jpg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    border-radius: 40px;
+  padding: 100px 100px;
+  width: 100%;
+  height: 644px;
+  background-image: url("../assets/enjoy/enjoy-bg.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+
+  @include media-laptop {
+    padding: 100px 60px;
+    background-position: center;
+  }
 }
 
 .enjoy__content {
-    width: 530px;
+  width: 530px;
 }
 
 .enjoy__text {
-    padding: 40px 0;
-    color: $color-text-light;
-    @include font(16px, 150%, normal, 400);
+  padding: 40px 0;
+  color: $color-text-light;
+  @include font(16px, 150%, normal, 400);
 }
 
 .enjoy__button {
-    width: 200px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    background: $color-bg-body;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 600);
-    border: none;
-    text-decoration: none;
-    @extend %transition;
-    cursor: pointer;
+  width: 200px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background: $color-bg-body;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 600);
+  border: none;
+  text-decoration: none;
+  @extend %transition;
+  cursor: pointer;
+
+  @include media-laptop {
+    cursor: unset;
+  }
 }
 
 .enjoy__button .cup {
-    margin-left: -18px;
-    opacity: 0;
-    transition: 1s;
+  margin-left: -18px;
+  opacity: 0;
+  transition: 1s;
+
+  @include media-laptop {
+    margin-left: 8px;
+    opacity: 1;
+  }
 }
 
 .enjoy__button:hover .cup {
-    margin-left: 8px;
-    opacity: 1;
-    transition: 1s;
+  margin-left: 8px;
+  opacity: 1;
 }

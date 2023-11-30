@@ -1,26 +1,31 @@
-@mixin font ($size, $height, $font-style, $font-weight) {
-    font-size: $size;
-    line-height: $height;
-    font-style: $font-style;
-    font-weight: $font-weight;
-    font-family: 'Inter', sans-serif;
-
+@mixin font($size, $height, $font-style, $font-weight) {
+  font-size: $size;
+  line-height: $height;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-family: "Inter", sans-serif;
 }
 
-@mixin cardImage () {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
+@mixin cardImage() {
+  height: 310px;
+  background-size: 340px 340px;
+  background-position: center;
+  border-radius: 40px;
 }
 
-@mixin aboutPhoto () {
-    background-size: 726px 726px;
-    background-position: center;
-    border-radius: 20px;
+@mixin aboutPhoto() {
+  background-size: 726px 726px;
+  background-position: center;
+  border-radius: 20px;
 }
 
-@mixin icon () {
-    background-repeat: no-repeat;
-    background-position: center;
+@mixin icon() {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin media-laptop {
+  @media (max-width: $adaptive-pad-limit) {
+    @content;
+  }
 }

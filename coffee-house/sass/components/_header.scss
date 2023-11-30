@@ -1,71 +1,114 @@
 .header {
-    padding-top: 20px;
-    background: $color-bg-body;
+  padding-top: 20px;
+  background: $color-bg-body;
 }
 
 .header__wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    align-items: center;
+  }
 }
 
 .logo {
-    width: 100px;
-    height: 60px;
-    display: inline-block;
-    background: url(../assets/header/logo.svg);
+  width: 100px;
+  height: 60px;
+  display: inline-block;
+  background: url(../assets/header/logo.svg);
 }
 
 .header__navigation {
-    margin: auto;
+  margin: auto;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .navigation {
-    display: flex;
-    column-gap: 40px;
-    list-style-type: none;
+  display: flex;
+  column-gap: 40px;
+  list-style-type: none;
 }
 
 .header__menu-link {
-    padding-bottom: 2px;
-    display: flex;
-    margin-top: 16px;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 600);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    @extend %transition;
+  padding-bottom: 2px;
+  display: flex;
+  margin-top: 16px;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 600);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  @extend %transition;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .cup {
-    margin-left: 8px;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-image: url('../assets/header/coffee-cup.svg')
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("../assets/header/coffee-cup.svg");
 }
 
 .header__menu-link:hover {
-    border-bottom: 2px solid $color-text-dark;
+  border-bottom: 2px solid $color-text-dark;
 }
 
 .navigation__links {
-    padding-bottom: 2px;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 600);
-    letter-spacing: 0.16px;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    @extend %transition;
+  padding-bottom: 2px;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 600);
+  letter-spacing: 0.16px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  @extend %transition;
 }
 
 .navigation__links:hover {
-    border-bottom: 2px solid $color-text-dark;
+  border-bottom: 2px solid $color-text-dark;
 }
 
 .header__menu-item {
-    margin-top: 16px;
+  margin-top: 16px;
+  display: inline-block;
+  width: 72px;
+  height: 28px;
+  background-image: url("../assets/header/menu-item.svg");
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    border-radius: 100px;
+    border: 1px solid $color-border-dark;
+  }
+}
+
+.burger-menu__icon {
+  display: none;
+  width: 16px;
+  height: 1px;
+  background-color: $color-border-dark;
+
+  @media (max-width: $tablet-width) {
     display: inline-block;
-    width: 72px;
-    height: 28px;
-    background-image: url('../assets/header/menu-item.svg');
+  }
 }
