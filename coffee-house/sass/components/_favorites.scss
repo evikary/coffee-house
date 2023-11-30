@@ -1,95 +1,96 @@
 .favourites {
-    padding: 100px 0;
-    background: $color-bg-body;
+  padding: 100px 0;
+  background: $color-bg-body;
 }
 
 .favorites__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .favourites__slider {
-    margin-top: 40px;
-    padding: 0 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 40px;
+  margin-top: 40px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
 }
 
 .favorites__title {
-    letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
 
 .favourites__slide {
-    width: 1152px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 1152px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .favorites__img {
-    margin-bottom: 20px;
-    width: 480px;
-    height: 480px;
+  margin-bottom: 20px;
+  width: 480px;
+  height: 480px;
 }
 
 .favourites__text {
-    margin: 16px 0;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 400);
-    text-align: center;
+  margin: 16px 0;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 400);
+  text-align: center;
 }
 
 .favourites__box {
-    margin-top: 40px;
-    display: flex;
-    column-gap: 12px;
+  margin-top: 40px;
+  display: flex;
+  column-gap: 12px;
 }
 
 .line {
-    width: 40px;
-    height: 4px;
-    background-color: $color-border-light;
+  width: 40px;
+  height: 4px;
+  background-color: $color-border-light;
+  border-radius: 100px;
 
-    &_active {
-        background-color: $color-border-dark;
-    }
+  &_active {
+    background-color: $color-border-dark;
+  }
 }
 
 .left-arrow {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/favourites/arrow-left.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-dark;
-    @extend %transition;
-    cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/favourites/arrow-left.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+  @extend %transition;
+  cursor: pointer;
 }
 
 .left-arrow:hover {
-    border: 1px solid $color-bg-container;
-    background: $color-bg-container;
-    background-image: url('../assets/favourites/arrow-left-hover.svg');
-    @include icon;
+  border: 1px solid $color-bg-container;
+  background: $color-bg-container;
+  background-image: url("../assets/favourites/arrow-left-hover.svg");
+  @include icon;
 }
 
 .right-arrow {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/favourites/arrow-right.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-dark;
-    @extend %transition;
-    cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/favourites/arrow-right.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+  @extend %transition;
+  cursor: pointer;
 }
 
 .right-arrow:hover {
-    border: 1px solid $color-bg-container;
-    background: $color-bg-container;
-    background-image: url('../assets/favourites/arrow-right-hover.svg');
-    @include icon;
+  border: 1px solid $color-bg-container;
+  background: $color-bg-container;
+  background-image: url("../assets/favourites/arrow-right-hover.svg");
+  @include icon;
 }
