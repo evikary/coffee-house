@@ -12,6 +12,7 @@
   column-gap: 100px;
 
   @include media-laptop {
+    align-items: start;
     flex-direction: column;
     row-gap: 100px;
   }
@@ -26,7 +27,12 @@
   flex-grow: 1;
 
   @media (max-width: $tablet-width) {
-    width: 630px;
+    width: 688px;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 700px) {
+    width: 348px;
     flex-grow: 1;
   }
 
@@ -103,5 +109,9 @@
   @media (max-width: 650px) {
     width: 348px;
     height: 348px;
+  }
+
+  @include media-laptop {
+    align-self: center;
   }
 }
