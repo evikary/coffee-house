@@ -15,7 +15,7 @@
     column-gap: 6%;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1400px) {
     flex-direction: column;
     column-gap: 0;
     row-gap: 100px;
@@ -89,12 +89,4 @@
   height: 630px;
   background-image: url("../assets/app/mobile-screens.png");
   background-size: cover;
-
-  @include media-laptop {
-    width: 47%;
-  }
-
-  @media (max-width: $tablet-width) {
-    width: 630px;
-  }
 }

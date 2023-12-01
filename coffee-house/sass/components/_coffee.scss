@@ -1,238 +1,354 @@
 .menu {
-    padding: 20px 0 100px 0;
-    background: $color-bg-body;
+  padding: 20px 0 100px 0;
+  background: $color-bg-body;
 }
 
 .menu__title {
-    margin-bottom: 40px;
-    text-align: center;
-    letter-spacing: .3px;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 0.3px;
 }
 
 .menu__list {
-    padding-bottom: 40px;
-    width: 361px;
-    margin: auto;
+  padding-bottom: 40px;
+  width: 361px;
+  margin: auto;
 }
 
 .list {
-    display: flex;
-    column-gap: 16px;
-    list-style-type: none;
+  display: flex;
+  column-gap: 16px;
+  list-style-type: none;
 }
 
 .drink {
-    padding: 7px 15px 7px 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-text-dark;
-    border-radius: 100px;
-    border: 1px solid $color-border-light;
-    text-decoration: none;
-    @include font(16px, 150%, normal, 600);
-    @extend %transition;
+  padding: 7px 15px 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-dark;
+  border-radius: 100px;
+  border: 1px solid $color-border-light;
+  text-decoration: none;
+  @include font(16px, 150%, normal, 600);
+  @extend %transition;
 
-
-    &_active {
-        color: $color-text-light;
-        background: $color-bg-container;
-        border: 1px solid $color-bg-container;
-        cursor: default;
-    }
-}
-
-.drink:hover {
+  &_active {
     color: $color-text-light;
     background: $color-bg-container;
     border: 1px solid $color-bg-container;
+    cursor: default;
+  }
+}
+
+.drink:hover {
+  color: $color-text-light;
+  background: $color-bg-container;
+  border: 1px solid $color-bg-container;
 }
 
 .coffee {
-    padding: 3px 7px;
-    margin-right: 8px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    border-radius: 100px;
-    background-color: $color-border-light;
-    text-align: center;
-    @include font(16px, 150%, normal, 600);
-    @extend %transition;
+  padding: 3px 7px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $color-border-light;
+  text-align: center;
+  @include font(16px, 150%, normal, 600);
+  @extend %transition;
 
-    &_active {
-        background-color: $color-bg-body;
-    }
+  &_active {
+    background-color: $color-bg-body;
+  }
 }
 
-.coffee>img {
-    width: 16px;
-    height: auto;
+.coffee > img {
+  width: 16px;
+  height: auto;
 }
 
 .drink:hover .coffee {
-    background-color: $color-bg-body;
+  background-color: $color-bg-body;
 }
 
 .tea {
-    padding: 3px 7px;
-    margin-right: 8px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    border-radius: 100px;
-    background-color: $color-border-light;
-    text-align: center;
-    @include font(16px, 150%, normal, 600);
-    @extend %transition;
-
+  padding: 3px 7px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $color-border-light;
+  text-align: center;
+  @include font(16px, 150%, normal, 600);
+  @extend %transition;
 }
 
-.tea>img {
-    width: 16px;
-    height: auto;
+.tea > img {
+  width: 16px;
+  height: auto;
 }
 
 .drink:hover .tea {
-    background-color: $color-bg-body;
+  background-color: $color-bg-body;
 }
 
 .dessert {
-    padding: 3px 7px;
-    margin-right: 8px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    border-radius: 100px;
-    background-color: $color-border-light;
-    text-align: center;
-    @include font(16px, 150%, normal, 600);
-    @extend %transition;
+  padding: 3px 7px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $color-border-light;
+  text-align: center;
+  @include font(16px, 150%, normal, 600);
+  @extend %transition;
 }
 
-.dessert>img {
-    width: 16px;
-    height: auto;
+.dessert > img {
+  width: 16px;
+  height: auto;
 }
 
 .drink:hover .dessert {
-    background-color: $color-bg-body;
+  background-color: $color-bg-body;
 }
 
 .menu__grig-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 505px 505px;
+  gap: 40px;
+
+  @include media-laptop {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 505px 505px;
     gap: 40px;
+  }
 }
 
 .menu__card {
-    border: 1px solid $color-border-light;
-    border-radius: 40px;
+  border: 1px solid $color-border-light;
+  border-radius: 40px;
+
+  @include media-laptop {
+    display: flex;
+    flex-direction: column;
+    // flex-shrink: 0;
+  }
+}
+
+.card-hidden {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .image1 {
-    background-image: url('../assets/menu/coffee-1.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-1.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image1 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image2 {
-    background-image: url('../assets/menu/coffee-2.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-2.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image2 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image3 {
-    background-image: url('../assets/menu/coffee-3.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-3.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image3 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image4 {
-    background-image: url('../assets/menu/coffee-4.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-4.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image4 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image5 {
-    background-image: url('../assets/menu/coffee-5.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-5.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image5 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image6 {
-    background-image: url('../assets/menu/coffee-6.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-6.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image6 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image7 {
-    background-image: url('../assets/menu/coffee-7.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-7.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image7 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .image8 {
-    background-image: url('../assets/menu/coffee-8.jpg');
-    @include cardImage;
-    @extend %transition;
+  background-image: url("../assets/menu/coffee-8.jpg");
+  @include cardImage;
+  @extend %transition;
+
+  @include media-laptop {
+    min-width: 310px;
+  }
 }
 
 .menu__card:hover .image8 {
-    background-size: calc(340px - 10%) calc(340px - 10%);
+  background-size: calc(340px - 10%) calc(340px - 10%);
+
+  @include media-laptop {
+    background-size: unset;
+  }
 }
 
 .menu__text-content {
-    height: 196px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  height: 196px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-content__title {
-    text-align: start;
+  text-align: start;
 }
 
 .text-content__text {
-    margin: 12px 0;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 400);
+  margin: 12px 0;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 400);
 }
 
 .price {
-    margin-top: auto;
-    color: $color-text-dark;
-    @include font(24px, 125%, normal, 600);
+  margin-top: auto;
+  color: $color-text-dark;
+  @include font(24px, 125%, normal, 600);
+}
+
+.button-refresh {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    margin: auto;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    border-radius: 100px;
+    border: 1px solid $color-border-dark;
+  }
+}
+
+.refresh-icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/menu/refresh.svg");
+
+  @media (max-width: $tablet-width) {
+    display: inline-block;
+  }
 }

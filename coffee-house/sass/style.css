@@ -563,7 +563,7 @@ h3 {
     column-gap: 6%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .app__wrapper {
     flex-direction: column;
     column-gap: 0;
@@ -643,16 +643,6 @@ h3 {
   height: 630px;
   background-image: url("../assets/app/mobile-screens.png");
   background-size: cover;
-}
-@media (max-width: 1439px) {
-  .app__image {
-    width: 47%;
-  }
-}
-@media (max-width: 768px) {
-  .app__image {
-    width: 630px;
-  }
 }
 
 .footer {
@@ -1034,10 +1024,38 @@ h3 {
   grid-template-rows: 505px 505px;
   gap: 40px;
 }
+@media (max-width: 1439px) {
+  .menu__grig-layout {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .menu__grig-layout {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 505px 505px;
+    gap: 40px;
+  }
+}
 
 .menu__card {
   border: 1px solid #c1b6ad;
   border-radius: 40px;
+}
+@media (max-width: 1439px) {
+  .menu__card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-hidden {
+    display: none;
+  }
 }
 
 .image1 {
@@ -1047,9 +1065,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image1 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image1 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image1 {
+    background-size: unset;
+  }
 }
 
 .image2 {
@@ -1059,9 +1087,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image2 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image2 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image2 {
+    background-size: unset;
+  }
 }
 
 .image3 {
@@ -1071,9 +1109,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image3 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image3 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image3 {
+    background-size: unset;
+  }
 }
 
 .image4 {
@@ -1083,9 +1131,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image4 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image4 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image4 {
+    background-size: unset;
+  }
 }
 
 .image5 {
@@ -1095,9 +1153,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image5 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image5 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image5 {
+    background-size: unset;
+  }
 }
 
 .image6 {
@@ -1107,9 +1175,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image6 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image6 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image6 {
+    background-size: unset;
+  }
 }
 
 .image7 {
@@ -1119,9 +1197,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image7 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image7 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image7 {
+    background-size: unset;
+  }
 }
 
 .image8 {
@@ -1131,9 +1219,19 @@ h3 {
   background-position: center;
   border-radius: 40px;
 }
+@media (max-width: 1439px) {
+  .image8 {
+    min-width: 310px;
+  }
+}
 
 .menu__card:hover .image8 {
   background-size: calc(340px - 10%) calc(340px - 10%);
+}
+@media (max-width: 1439px) {
+  .menu__card:hover .image8 {
+    background-size: unset;
+  }
 }
 
 .menu__text-content {
@@ -1165,6 +1263,36 @@ h3 {
   font-style: normal;
   font-weight: 600;
   font-family: "Inter", sans-serif;
+}
+
+.button-refresh {
+  display: none;
+}
+@media (max-width: 768px) {
+  .button-refresh {
+    margin: auto;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    border-radius: 100px;
+    border: 1px solid #665f55;
+  }
+}
+
+.refresh-icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/menu/refresh.svg");
+}
+@media (max-width: 768px) {
+  .refresh-icon {
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
