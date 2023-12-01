@@ -12,13 +12,12 @@
   column-gap: 100px;
 
   @include media-laptop {
-    column-gap: 6%;
+    flex-direction: column;
+    row-gap: 100px;
   }
 
-  @media (max-width: 1400px) {
-    flex-direction: column;
-    column-gap: 0;
-    row-gap: 100px;
+  @media (max-width: 650px) {
+    row-gap: 40px;
   }
 }
 
@@ -28,6 +27,11 @@
 
   @media (max-width: $tablet-width) {
     width: 630px;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 650px) {
+    width: 348px;
   }
 }
 
@@ -45,6 +49,12 @@
 .app__btns {
   display: flex;
   column-gap: 20px;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 20px;
+  }
 }
 
 .app-store {
@@ -89,4 +99,9 @@
   height: 630px;
   background-image: url("../assets/app/mobile-screens.png");
   background-size: cover;
+
+  @media (max-width: 650px) {
+    width: 348px;
+    height: 348px;
+  }
 }

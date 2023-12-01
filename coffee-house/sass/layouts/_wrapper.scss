@@ -6,4 +6,9 @@
   @include media-laptop {
     width: 100%;
   }
+
+  @include media-mobile {
+    padding: 0 16px;
+    width: 100%;
+  }
 }

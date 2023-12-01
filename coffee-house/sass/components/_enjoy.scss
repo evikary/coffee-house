@@ -17,10 +17,18 @@
     padding: 100px 60px;
     background-position: center;
   }
+
+  @media (max-width: 500px) {
+    padding: 60px 16px;
+  }
 }
 
 .enjoy__content {
   width: 530px;
+
+  @include media-mobile {
+    width: 316px;
+  }
 }
 
 .enjoy__text {

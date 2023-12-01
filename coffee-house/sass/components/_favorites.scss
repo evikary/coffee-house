@@ -38,12 +38,22 @@
     flex-basis: 488px;
     flex-grow: 1;
   }
+
+  @media (max-width: 550px) {
+    flex-basis: 348px;
+    flex-grow: 1;
+  }
 }
 
 .favorites__img {
   margin-bottom: 20px;
   width: 480px;
   height: 480px;
+
+  @media (max-width: 550px) {
+    width: 348px;
+    height: 348px;
+  }
 }
 
 .favourites__text {
@@ -79,6 +89,10 @@
   border: 1px solid $color-border-dark;
   @extend %transition;
   cursor: pointer;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .left-arrow:hover {
@@ -104,6 +118,10 @@
   border: 1px solid $color-border-dark;
   @extend %transition;
   cursor: pointer;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .right-arrow:hover {

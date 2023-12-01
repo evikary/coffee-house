@@ -1,38 +1,44 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1 {
-    color: $color-text-light;
-    @include font(72px, 105%, normal, 600);
-    letter-spacing: .5px;
+  color: $color-text-light;
+  @include font(72px, 105%, normal, 600);
+  letter-spacing: 0.5px;
 
+  span {
+    color: $color-text-accent;
+    font-style: italic;
+  }
 
-    span {
-        color: $color-text-accent;
-        font-style: italic;
-    }
+  @include media-mobile {
+    @include font(42px, 115%, normal, 600);
+  }
 }
 
 h2 {
-    color: $color-text-dark;
-    @include font(60px, 125%, normal, 600);
+  color: $color-text-dark;
+  @include font(60px, 125%, normal, 600);
 
+  span {
+    color: $color-text-accent;
+    font-style: italic;
+  }
 
-    span {
-        color: $color-text-accent;
-        font-style: italic;
-    }
+  @include media-mobile {
+    @include font(32px, 125%, normal, 600);
+  }
 }
 
 h3 {
-    color: $color-text-dark;
-    @include font(24px, 125%, normal, 600);
-    text-align: center;
+  color: $color-text-dark;
+  @include font(24px, 125%, normal, 600);
+  text-align: center;
 }
