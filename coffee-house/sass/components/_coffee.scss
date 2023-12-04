@@ -53,6 +53,12 @@
   color: $color-text-light;
   background: $color-bg-container;
   border: 1px solid $color-bg-container;
+
+  @include media-mobile {
+    color: $color-text-dark;
+    background: transparent;
+    border: 1px solid $color-border-light;
+  }
 }
 
 .coffee {
@@ -103,6 +109,10 @@
 
 .drink:hover .tea {
   background-color: $color-bg-body;
+
+  @include media-mobile {
+    background-color: $color-border-light;
+  }
 }
 
 .dessert {
@@ -126,6 +136,10 @@
 
 .drink:hover .dessert {
   background-color: $color-bg-body;
+
+  @include media-mobile {
+    background-color: $color-border-light;
+  }
 }
 
 .menu__grig-layout {
@@ -197,7 +211,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -215,7 +229,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -233,7 +247,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -251,7 +265,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -269,7 +283,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -287,7 +301,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -305,7 +319,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 
@@ -323,7 +337,7 @@
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
-    background-size: unset;
+    @include cardImage;
   }
 }
 

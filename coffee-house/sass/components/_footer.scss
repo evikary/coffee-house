@@ -29,7 +29,8 @@
 }
 
 .footer__content {
-  flex-basis: 630px;
+  // flex-basis: 630px;
+  flex-basis: 530px;
   flex-shrink: 1;
 
   @media (max-width: $tablet-width) {
