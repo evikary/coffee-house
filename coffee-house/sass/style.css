@@ -286,35 +286,49 @@ h3 {
   background: #e1d4c9;
 }
 
-.enjoy__bg {
-  padding: 100px 100px;
+.enjoy__video {
+  position: absolute;
   width: 100%;
-  height: 644px;
-  background-image: url("../assets/enjoy/enjoy-bg.jpg");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 40px;
+  object-fit: cover;
 }
-@media (max-width: 1439px) {
-  .enjoy__bg {
-    padding: 100px 60px;
-    background-position: center;
-  }
+
+.enjoy__bg {
+  width: 100%;
+  max-height: 644px;
+  min-height: 644px;
+  position: relative;
+  border-radius: 40px;
 }
 @media (max-width: 500px) {
   .enjoy__bg {
-    height: 552px;
-    padding: 60px 16px;
+    max-height: 552px;
+    min-height: 552px;
   }
 }
 
 .enjoy__content {
   width: 530px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+}
+@media (max-width: 1439px) {
+  .enjoy__content {
+    left: 60px;
+  }
 }
 @media (max-width: 767px) {
   .enjoy__content {
     width: 316px;
+    top: 60px;
+    left: 16px;
   }
 }
 
