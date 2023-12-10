@@ -26,7 +26,7 @@
   font-display: swap;
   font-style: italic;
 }
-.image8, .image7, .image6, .image5, .image4, .image3, .image2, .image1, .dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
+.image, .dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
   transition: all 0.3s;
 }
 
@@ -1129,9 +1129,6 @@ h3 {
   font-weight: 600;
   font-family: "Inter", sans-serif;
 }
-.coffee_active {
-  background-color: #e1d4c9;
-}
 
 .coffee > img {
   width: 16px;
@@ -1207,7 +1204,7 @@ h3 {
 .menu__grig-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 505px 505px;
+  grid-template-rows: 505px;
   gap: 40px;
 }
 @media (max-width: 1439px) {
@@ -1224,7 +1221,7 @@ h3 {
     margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 505px 505px;
+    grid-template-rows: 505px;
     gap: 40px;
   }
 }
@@ -1264,199 +1261,23 @@ h3 {
   }
 }
 
-.image1 {
-  background-image: url("../assets/menu/coffee-1.jpg");
+.image {
   height: 310px;
   background-size: 340px 340px;
   background-position: center;
   border-radius: 40px;
 }
 @media (max-width: 1439px) {
-  .image1 {
+  .image {
     min-width: 310px;
   }
 }
 
-.menu__card:hover .image1 {
+.menu__card:hover .image {
   background-size: calc(340px - 10%) calc(340px - 10%);
 }
 @media (max-width: 1439px) {
-  .menu__card:hover .image1 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image2 {
-  background-image: url("../assets/menu/coffee-2.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image2 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image2 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image2 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image3 {
-  background-image: url("../assets/menu/coffee-3.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image3 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image3 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image3 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image4 {
-  background-image: url("../assets/menu/coffee-4.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image4 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image4 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image4 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image5 {
-  background-image: url("../assets/menu/coffee-5.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image5 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image5 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image5 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image6 {
-  background-image: url("../assets/menu/coffee-6.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image6 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image6 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image6 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image7 {
-  background-image: url("../assets/menu/coffee-7.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image7 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image7 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image7 {
-    height: 310px;
-    background-size: 340px 340px;
-    background-position: center;
-    border-radius: 40px;
-  }
-}
-
-.image8 {
-  background-image: url("../assets/menu/coffee-8.jpg");
-  height: 310px;
-  background-size: 340px 340px;
-  background-position: center;
-  border-radius: 40px;
-}
-@media (max-width: 1439px) {
-  .image8 {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image8 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-}
-@media (max-width: 1439px) {
-  .menu__card:hover .image8 {
+  .menu__card:hover .image {
     height: 310px;
     background-size: 340px 340px;
     background-position: center;
@@ -1476,6 +1297,7 @@ h3 {
 }
 
 .text-content__text {
+  max-width: 270px;
   margin: 12px 0;
   color: #403f3d;
   font-size: 16px;
@@ -1522,6 +1344,12 @@ h3 {
 @media (max-width: 768px) {
   .refresh-icon {
     display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-refresh-hidden {
+    display: none;
   }
 }
 

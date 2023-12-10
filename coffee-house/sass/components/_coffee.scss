@@ -73,10 +73,6 @@
   text-align: center;
   @include font(16px, 150%, normal, 600);
   @extend %transition;
-
-  &_active {
-    background-color: $color-bg-body;
-  }
 }
 
 .coffee > img {
@@ -145,7 +141,7 @@
 .menu__grig-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 505px 505px;
+  grid-template-rows: 505px;
   gap: 40px;
 
   @include media-laptop {
@@ -160,7 +156,7 @@
     margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 505px 505px;
+    grid-template-rows: 505px;
     gap: 40px;
   }
 
@@ -197,8 +193,7 @@
   }
 }
 
-.image1 {
-  background-image: url("../assets/menu/coffee-1.jpg");
+.image {
   @include cardImage;
   @extend %transition;
 
@@ -207,133 +202,7 @@
   }
 }
 
-.menu__card:hover .image1 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image2 {
-  background-image: url("../assets/menu/coffee-2.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image2 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image3 {
-  background-image: url("../assets/menu/coffee-3.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image3 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image4 {
-  background-image: url("../assets/menu/coffee-4.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image4 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image5 {
-  background-image: url("../assets/menu/coffee-5.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image5 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image6 {
-  background-image: url("../assets/menu/coffee-6.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image6 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image7 {
-  background-image: url("../assets/menu/coffee-7.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image7 {
-  background-size: calc(340px - 10%) calc(340px - 10%);
-
-  @include media-laptop {
-    @include cardImage;
-  }
-}
-
-.image8 {
-  background-image: url("../assets/menu/coffee-8.jpg");
-  @include cardImage;
-  @extend %transition;
-
-  @include media-laptop {
-    min-width: 310px;
-  }
-}
-
-.menu__card:hover .image8 {
+.menu__card:hover .image {
   background-size: calc(340px - 10%) calc(340px - 10%);
 
   @include media-laptop {
@@ -353,6 +222,7 @@
 }
 
 .text-content__text {
+  max-width: 270px;
   margin: 12px 0;
   color: $color-text-dark;
   @include font(16px, 150%, normal, 400);
@@ -389,5 +259,11 @@
 
   @media (max-width: $tablet-width) {
     display: inline-block;
+  }
+}
+
+.button-refresh-hidden {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
