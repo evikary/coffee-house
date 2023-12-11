@@ -67,29 +67,67 @@
           <h2 class="favorites__title">
             Choose your <span>favorite</span> coffee
           </h2>
-          <div class="favourites__slider">
+          <div class="favourites__slider-container">
             <span class="left-arrow"></span>
-            <div class="favourites__slide">
-              <img
-                class="favorites__img"
-                src="./assets/favourites/coffee1.png"
-                alt="coffee1"
-              />
-              <h3>S’mores Frappuccino</h3>
-              <p class="favourites__text">
-                This new drink takes an espresso and mixes it with brown<br
-                  class="only-desk"
-                />
-                sugar and cinnamon before being topped with oat milk.
-              </p>
-              <h3>$5.50</h3>
+            <div class="slider-window">
+              <div class="slider-track">
+                <div class="favourites__slide">
+                  <img
+                    class="favorites__img"
+                    src="./assets/favourites/coffee1.png"
+                    alt="coffee1"
+                  />
+                  <h3>S’mores Frappuccino</h3>
+                  <p class="favourites__text">
+                    This new drink takes an espresso and mixes it with brown<br
+                      class="only-desk"
+                    />
+                    sugar and cinnamon before being topped with oat milk.
+                  </p>
+                  <h3>$5.50</h3>
+                </div>
+                <div class="favourites__slide">
+                  <img
+                    class="favorites__img"
+                    src="./assets/favourites/coffee2.png"
+                    alt="coffee2"
+                  />
+                  <h3>Caramel Macchiato</h3>
+                  <p class="favourites__text">
+                    Fragrant and unique classic espresso with rich
+                    caramel-peanut
+                    <br class="only-desk" />syrup, with cream under whipped
+                    thick foam.
+                  </p>
+                  <h3>$5.00</h3>
+                </div>
+                <div class="favourites__slide">
+                  <img
+                    class="favorites__img"
+                    src="./assets/favourites/coffee3.png"
+                    alt="coffee3"
+                  />
+                  <h3>Ice coffee</h3>
+                  <p class="favourites__text">
+                    A popular summer drink that tones and invigorates. Prepared
+                    <br class="only-desk" />from coffee, milk and ice.
+                  </p>
+                  <h3>$4.50</h3>
+                </div>
+              </div>
             </div>
             <span class="right-arrow"></span>
           </div>
           <div class="favourites__box">
-            <div class="line line_active"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -179,5 +217,6 @@
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -26,7 +26,7 @@
   font-display: swap;
   font-style: italic;
 }
-.image, .dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .enjoy__button, .navigation__links, .header__menu-link {
+.image, .dessert, .tea, .coffee, .drink, .tel, .map-link, .icon-facebook, .icon-instagram, .icon-twitter, .google-play, .app-store, .about__photo4, .about__photo3, .about__photo2, .about__photo1, .right-arrow, .left-arrow, .slider-track, .enjoy__button, .navigation__links, .header__menu-link {
   transition: all 0.3s;
 }
 
@@ -394,7 +394,7 @@ h3 {
   align-items: center;
 }
 
-.favourites__slider {
+.favourites__slider-container {
   width: 100%;
   margin-top: 40px;
   padding: 0 4px;
@@ -404,9 +404,29 @@ h3 {
   column-gap: 40px;
 }
 @media (max-width: 767px) {
-  .favourites__slider {
+  .favourites__slider-container {
     padding: 0;
   }
+}
+
+.slider-window {
+  overflow: hidden;
+  width: 1152px;
+}
+@media (max-width: 1439px) {
+  .slider-window {
+    width: 688px;
+  }
+}
+@media (max-width: 767px) {
+  .slider-window {
+    width: 100%;
+  }
+}
+
+.slider-track {
+  display: flex;
+  column-gap: 25px;
 }
 
 .favorites__title {
@@ -419,6 +439,7 @@ h3 {
 }
 
 .favourites__slide {
+  min-width: 100%;
   flex-basis: 1152px;
   flex-grow: 1;
   display: flex;
@@ -451,6 +472,7 @@ h3 {
 }
 
 .favourites__text {
+  max-width: 480px;
   margin: 16px 0;
   color: #403f3d;
   font-size: 16px;
@@ -460,6 +482,11 @@ h3 {
   font-family: "Inter", sans-serif;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .favourites__text {
+    max-width: 348px;
+  }
+}
 
 .favourites__box {
   margin-top: 40px;
@@ -467,17 +494,22 @@ h3 {
   column-gap: 12px;
 }
 
-.line {
+.line-wrapper {
   width: 40px;
   height: 4px;
   background-color: #c1b6ad;
   border-radius: 100px;
 }
-.line_active {
+
+.line {
+  width: 0;
+  height: 4px;
+  border-radius: 100px;
   background-color: #665f55;
 }
 
 .left-arrow {
+  flex-shrink: 0;
   width: 60px;
   height: 60px;
   background-image: url("../assets/favourites/arrow-left.svg");
@@ -511,6 +543,7 @@ h3 {
 }
 
 .right-arrow {
+  flex-shrink: 0;
   width: 60px;
   height: 60px;
   background-image: url("../assets/favourites/arrow-right.svg");
