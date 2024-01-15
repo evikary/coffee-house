@@ -52,6 +52,7 @@ const addEllements = () => {
   headerHint.textContent = "Подсказка: ";
 
   const bodyHint = document.createElement("span");
+  bodyHint.classList.add("hintText");
   bodyHint.textContent = "Разносторонние знания";
 
   const guess = document.createElement("h3");

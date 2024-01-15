@@ -1,8 +1,11 @@
+import { dataWords } from "./dataWords.js";
 import "./createElements.js";
+
 const abc = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
 
 const keyboard = document.querySelector(".keyboard");
 const wordElement = document.querySelector(".word");
+const hintText = document.querySelector(".hintText");
 const counter = document.querySelector(".counter");
 const head = document.querySelector(".head");
 const body = document.querySelector(".body");
@@ -12,6 +15,7 @@ const leftLeg = document.querySelector(".leftLeg");
 const rightLeg = document.querySelector(".rightLeg");
 
 let word;
+let hint;
 let secret;
 let userLetters;
 let faledLetter;
@@ -19,6 +23,7 @@ let count;
 
 const refresh = () => {
   wordElement.textContent = secret;
+  hintText.textContent = hint;
   counter.textContent = count;
   head.classList.remove("show");
   body.classList.remove("show");
@@ -34,8 +39,10 @@ const refresh = () => {
 };
 
 const initGame = () => {
-  word = "эрудированность";
-  secret = "_______________";
+  const index = Math.floor(Math.random() * dataWords.length);
+  word = dataWords[index].word;
+  hint = dataWords[index].hint;
+  secret = "_".repeat(word.length);
   userLetters = "";
   faledLetter = "";
   count = 6;
@@ -54,7 +61,7 @@ const showGreetingModal = () => {
   greeting.classList.add("greeting");
   greeting.innerHTML = `<h1>Поздравляем!!! &#127874;</h1>
                         <p class='greeting-text'>(Сегодня вас &#128520; не повесят)</p>
-                        <p class='greeting-someText'>Было загадано слово: <br/><br/><span class='greeting-hint'>Эрудированность</span></p>
+                        <p class='greeting-someText'>Было загадано слово: <br/><br/><span class='greeting-hint'>${word}</span></p>
                         <button class='btn'>Попробовать еще раз</button>`;
 
   const modal = document.createElement("div");
@@ -79,7 +86,7 @@ const showRequiemModal = () => {
   greeting.classList.add("greeting");
   greeting.innerHTML = `<h1>&#128123;Вы проиграли!</h1>
                         <p class='greeting-text'>(Немного подергаетесь и &#128128;успокоитесь)</p>
-                        <p class='greeting-someText'>Было загадано слово: <br/><br/><span class='greeting-hint'>Эрудированность</span></p>
+                        <p class='greeting-someText'>Было загадано слово: <br/><br/><span class='greeting-hint'>${word}</span></p>
                         <button class='btn'>Попробовать еще раз</button>`;
 
   const modal = document.createElement("div");
