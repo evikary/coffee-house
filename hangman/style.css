@@ -265,3 +265,383 @@ h3 {
   background-color: rgb(159, 227, 230);
   border: 1px solid rgb(47, 82, 83);
 }
+
+.btn:hover {
+  background-color: rgb(47, 82, 83);
+  color: #d8dfe3;
+}
+
+@media (width < 1440px) {
+  .wrapper {
+    width: 768px;
+    padding: 80px 50px 30px 50px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10%;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+
+  .head {
+    display: none;
+    position: absolute;
+    left: 253px;
+    top: 148px;
+    background-image: url("./assets/head.svg");
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 30%;
+  }
+
+  .body {
+    display: none;
+    position: absolute;
+    left: 300px;
+    top: 244px;
+    background-image: url("./assets/body.svg");
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 30%;
+  }
+
+  .leftHand {
+    display: none;
+    position: absolute;
+    left: 236px;
+    top: 244px;
+    background-image: url("./assets/hand-one.svg");
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 30%;
+  }
+
+  .rightHand {
+    display: none;
+    position: absolute;
+    top: 244px;
+    left: 302px;
+    background-image: url("./assets/hand-two.svg");
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 30%;
+  }
+
+  .leftLeg {
+    display: none;
+    position: absolute;
+    left: 237px;
+    top: 374px;
+    background-image: url("./assets/leg-one.svg");
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 30%;
+  }
+
+  .rightLeg {
+    display: none;
+    position: absolute;
+    top: 374px;
+    left: 300px;
+    background-image: url("./assets/leg-two.svg");
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 30%;
+  }
+
+  .show {
+    display: block;
+  }
+
+  h1 {
+    margin: 0 0 0 0;
+    font-size: 43px;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 30px 0 0 0;
+  }
+
+  .modal {
+    width: 500px;
+    height: 400px;
+    padding: 30px 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid rgb(50, 51, 51);
+    background: rgb(234, 228, 228);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04),
+      0px 4px 8px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.04),
+      0px 24px 32px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  .greeting-text {
+    margin-top: 10px;
+    color: rgb(90, 92, 94);
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .greeting-someText {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .greeting-hint {
+    font-size: 30px;
+    text-transform: none;
+    color: rgb(230, 95, 87);
+    font-weight: 800;
+  }
+
+  .btn {
+    padding: 16px 12px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: rgb(159, 227, 230);
+    color: rgb(60, 74, 74);
+    border: 1px solid rgb(47, 82, 83);
+  }
+}
+
+@media (width < 768px) {
+  .wrapper {
+    width: 100%;
+    padding: 50px 20px 20px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10%;
+  }
+
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallows {
+    position: relative;
+    background-image: url("./assets/gallows.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 329px;
+  }
+
+  .head {
+    display: none;
+    position: absolute;
+    left: 148px;
+    top: 84px;
+    background-image: url("./assets/head.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  }
+
+  .body {
+    display: none;
+    position: absolute;
+    left: 170px;
+    top: 134px;
+    background-image: url("./assets/body.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5px;
+    height: 90px;
+  }
+
+  .leftHand {
+    display: none;
+    position: absolute;
+    left: 125px;
+    top: 98px;
+    background-image: url("./assets/hand-one.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45px;
+    height: 95px;
+  }
+
+  .rightHand {
+    display: none;
+    position: absolute;
+    top: 98px;
+    left: 175px;
+    background-image: url("./assets/hand-two.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    width: 45px;
+    height: 95px;
+  }
+
+  .leftLeg {
+    display: none;
+    position: absolute;
+    left: 128px;
+    top: 174px;
+    background-image: url("./assets/leg-one.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45px;
+    height: 100px;
+  }
+
+  .rightLeg {
+    display: none;
+    position: absolute;
+    top: 174px;
+    left: 173px;
+    background-image: url("./assets/leg-two.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 45px;
+    height: 100px;
+  }
+
+  h1 {
+    margin: 0 0 0 0;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .letters {
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .hint {
+    width: 80%;
+    margin: auto;
+    padding: 30px 20px 30px;
+  }
+
+  h2 {
+    color: rgb(90, 92, 94);
+    font-size: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 span {
+    font-size: 16px;
+    text-transform: none;
+  }
+
+  .keyboard {
+    width: 90%;
+    margin: auto;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+  }
+
+  .key {
+    width: 30px;
+    padding: 5px;
+    background-color: cadetblue;
+    border-radius: 12px;
+    border: 1px solid rgb(47, 82, 83);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .modal {
+    width: 300px;
+    height: 200px;
+    padding: 15px 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid rgb(50, 51, 51);
+    background: rgb(234, 228, 228);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04),
+      0px 4px 8px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.04),
+      0px 24px 32px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  .greeting > h1 {
+    font-size: 20px;
+  }
+
+  .greeting-text {
+    margin-top: 7px;
+    color: rgb(90, 92, 94);
+    font-size: 12px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .greeting-someText {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .greeting-hint {
+    font-size: 20px;
+    text-transform: none;
+    color: rgb(230, 95, 87);
+    font-weight: 800;
+  }
+
+  .btn {
+    padding: 10px 6px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: rgb(159, 227, 230);
+    color: rgb(60, 74, 74);
+    border: 1px solid rgb(47, 82, 83);
+  }
+}
