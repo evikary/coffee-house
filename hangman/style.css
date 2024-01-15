@@ -25,10 +25,81 @@ body {
 }
 
 .gallows {
+  position: relative;
   background-image: url("./assets/gallows.svg");
   background-repeat: no-repeat;
   width: 100%;
   height: 600px;
+}
+
+.head {
+  display: none;
+  position: absolute;
+  left: 253px;
+  top: 148px;
+  background-image: url("./assets/head.svg");
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 100%;
+}
+
+.body {
+  display: none;
+  position: absolute;
+  left: 300px;
+  top: 244px;
+  background-image: url("./assets/body.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.leftHand {
+  display: none;
+  position: absolute;
+  left: 236px;
+  top: 244px;
+  background-image: url("./assets/hand-one.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.rightHand {
+  display: none;
+  position: absolute;
+  top: 244px;
+  left: 302px;
+  background-image: url("./assets/hand-two.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.leftLeg {
+  display: none;
+  position: absolute;
+  left: 237px;
+  top: 374px;
+  background-image: url("./assets/leg-one.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.rightLeg {
+  display: none;
+  position: absolute;
+  top: 374px;
+  left: 300px;
+  background-image: url("./assets/leg-two.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.show {
+  display: block;
 }
 
 h1 {
@@ -108,4 +179,89 @@ h3 {
   border-radius: 12px;
   border: 1px solid rgb(47, 82, 83);
   text-align: center;
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: rgb(159, 227, 230);
+}
+
+.disabled {
+  background-color: rgb(62, 77, 78);
+  cursor: none;
+}
+
+.disabled:hover {
+  background-color: rgb(62, 77, 78);
+  cursor: none;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  width: 720px;
+  height: 600px;
+  padding: 80px 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid rgb(50, 51, 51);
+  background: rgb(234, 228, 228);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04),
+    0px 4px 8px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.04),
+    0px 24px 32px 0px rgba(0, 0, 0, 0.04);
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.greeting-text {
+  margin-top: 10px;
+  color: rgb(90, 92, 94);
+  font-size: 25px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.greeting-someText {
+  margin: 80px 0 50px;
+  text-align: center;
+  font-size: 25px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.greeting-hint {
+  font-size: 30px;
+  text-transform: none;
+  color: rgb(230, 95, 87);
+  font-weight: 400;
+}
+
+.btn {
+  padding: 16px 12px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  background-color: rgb(159, 227, 230);
+  border: 1px solid rgb(47, 82, 83);
 }
