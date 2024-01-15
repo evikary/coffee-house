@@ -39,8 +39,8 @@ body {
   top: 148px;
   background-image: url("./assets/head.svg");
   background-repeat: no-repeat;
-  width: 70%;
-  height: 100%;
+  width: 30%;
+  height: 30%;
 }
 
 .body {
@@ -50,8 +50,8 @@ body {
   top: 244px;
   background-image: url("./assets/body.svg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 30%;
 }
 
 .leftHand {
@@ -61,8 +61,8 @@ body {
   top: 244px;
   background-image: url("./assets/hand-one.svg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 30%;
 }
 
 .rightHand {
@@ -72,8 +72,8 @@ body {
   left: 302px;
   background-image: url("./assets/hand-two.svg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 30%;
 }
 
 .leftLeg {
@@ -83,8 +83,8 @@ body {
   top: 374px;
   background-image: url("./assets/leg-one.svg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 30%;
 }
 
 .rightLeg {
@@ -94,8 +94,8 @@ body {
   left: 300px;
   background-image: url("./assets/leg-two.svg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 30%;
 }
 
 .show {
@@ -452,48 +452,32 @@ h3 {
   }
 
   .head {
-    display: none;
-    position: absolute;
     left: 148px;
     top: 84px;
-    background-image: url("./assets/head.svg");
-    background-repeat: no-repeat;
     background-size: cover;
     width: 50px;
     height: 50px;
   }
 
   .body {
-    display: none;
-    position: absolute;
     left: 170px;
     top: 134px;
-    background-image: url("./assets/body.svg");
-    background-repeat: no-repeat;
     background-size: cover;
     width: 5px;
     height: 90px;
   }
 
   .leftHand {
-    display: none;
-    position: absolute;
     left: 125px;
     top: 98px;
-    background-image: url("./assets/hand-one.svg");
-    background-repeat: no-repeat;
     background-size: cover;
     width: 45px;
     height: 95px;
   }
 
   .rightHand {
-    display: none;
-    position: absolute;
     top: 98px;
     left: 175px;
-    background-image: url("./assets/hand-two.svg");
-    background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     width: 45px;
@@ -501,24 +485,16 @@ h3 {
   }
 
   .leftLeg {
-    display: none;
-    position: absolute;
     left: 128px;
     top: 174px;
-    background-image: url("./assets/leg-one.svg");
-    background-repeat: no-repeat;
     background-size: cover;
     width: 45px;
     height: 100px;
   }
 
   .rightLeg {
-    display: none;
-    position: absolute;
     top: 174px;
     left: 173px;
-    background-image: url("./assets/leg-two.svg");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     width: 45px;
@@ -577,9 +553,7 @@ h3 {
   .key {
     width: 30px;
     padding: 5px;
-    background-color: cadetblue;
     border-radius: 12px;
-    border: 1px solid rgb(47, 82, 83);
     text-align: center;
     cursor: pointer;
   }

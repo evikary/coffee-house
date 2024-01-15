@@ -11,12 +11,38 @@ const rightHand = document.querySelector(".rightHand");
 const leftLeg = document.querySelector(".leftLeg");
 const rightLeg = document.querySelector(".rightLeg");
 
-const word = "эрудированность";
-let secret = "_______________";
-let userLetters = "";
-let faledLetter = "";
+let word;
+let secret;
+let userLetters;
+let faledLetter;
+let count;
 
-let count = +counter.textContent;
+const refresh = () => {
+  wordElement.textContent = secret;
+  counter.textContent = count;
+  head.classList.remove("show");
+  body.classList.remove("show");
+  leftHand.classList.remove("show");
+  rightHand.classList.remove("show");
+  leftLeg.classList.remove("show");
+  rightLeg.classList.remove("show");
+
+  const key = document.querySelectorAll(".key");
+  key.forEach((item) => {
+    item.classList.remove("disabled");
+  });
+};
+
+const initGame = () => {
+  word = "эрудированность";
+  secret = "_______________";
+  userLetters = "";
+  faledLetter = "";
+  count = 6;
+  refresh();
+};
+
+initGame();
 
 const countGuess = () => {
   count -= 1;
@@ -40,6 +66,12 @@ const showGreetingModal = () => {
   modal.append(greeting);
   modalOverlay.append(modal);
   document.body.append(modalOverlay);
+
+  const btnRestart = document.querySelector(".btn");
+  btnRestart.addEventListener("click", (e) => {
+    modalOverlay.remove();
+    initGame();
+  });
 };
 
 const showRequiemModal = () => {
@@ -59,6 +91,12 @@ const showRequiemModal = () => {
   modal.append(greeting);
   modalOverlay.append(modal);
   document.body.append(modalOverlay);
+
+  const btnRestart = document.querySelector(".btn");
+  btnRestart.addEventListener("click", (e) => {
+    modalOverlay.remove();
+    initGame();
+  });
 };
 
 const checkIncorrectGuess = (guess) => {
