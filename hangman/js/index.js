@@ -1,4 +1,6 @@
 import "./createElements.js";
+const abc = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
+
 const keyboard = document.querySelector(".keyboard");
 const wordElement = document.querySelector(".word");
 const counter = document.querySelector(".counter");
@@ -12,6 +14,7 @@ const rightLeg = document.querySelector(".rightLeg");
 const word = "эрудированность";
 let secret = "_______________";
 let userLetters = "";
+let faledLetter = "";
 
 let count = +counter.textContent;
 
@@ -58,60 +61,92 @@ const showRequiemModal = () => {
   document.body.append(modalOverlay);
 };
 
-keyboard.addEventListener("click", (e) => {
+const checkIncorrectGuess = (guess) => {
+  if (count === 5) {
+    head.classList.add("show");
+    return;
+  }
+  if (count === 4) {
+    body.classList.add("show");
+    return;
+  }
+  if (count === 3) {
+    leftHand.classList.add("show");
+    return;
+  }
+  if (count === 2) {
+    rightHand.classList.add("show");
+    return;
+  }
+  if (count === 1) {
+    leftLeg.classList.add("show");
+    return;
+  }
+  if (count === 0) {
+    rightLeg.classList.add("show");
+    showRequiemModal();
+    return;
+  }
+};
+
+const checkCorrectGuess = () => {
+  const newWord = word
+    .split("")
+    .map((item) => {
+      return userLetters.includes(item) ? item : "_";
+    })
+    .join("");
+  secret = newWord;
+  wordElement.textContent = secret;
+
+  if (!secret.includes("_")) {
+    showGreetingModal();
+  }
+};
+
+const checkVirtualKey = (e) => {
   if (e.target.className === "key") {
     const letter = e.target.textContent;
     userLetters += letter;
     e.target.classList.add("disabled");
 
     if (!word.includes(letter)) {
-      console.log("count", count);
       countGuess();
-
-      if (count === 5) {
-        head.classList.add("show");
-        return;
-      }
-
-      if (count === 4) {
-        body.classList.add("show");
-        return;
-      }
-
-      if (count === 3) {
-        leftHand.classList.add("show");
-        return;
-      }
-
-      if (count === 2) {
-        rightHand.classList.add("show");
-        return;
-      }
-
-      if (count === 1) {
-        leftLeg.classList.add("show");
-        return;
-      }
-
-      if (count === 0) {
-        rightLeg.classList.add("show");
-        showRequiemModal();
-        return;
-      }
+      checkIncorrectGuess();
     }
 
-    const newWord = word
-      .split("")
-      .map((item) => {
-        return userLetters.includes(item) ? item : "_";
-      })
-      .join("");
-    secret = newWord;
-    wordElement.textContent = secret;
-    console.log("secret", secret);
+    checkCorrectGuess();
+  }
+};
 
-    if (!secret.includes("_")) {
-      showGreetingModal();
+const checkRealKey = (e) => {
+  userLetters += e;
+  const abcVirtual = document.querySelectorAll(".key");
+
+  abcVirtual.forEach((item) => {
+    if (item.textContent === e) {
+      item.classList.add("disabled");
+    }
+  });
+
+  if (!word.includes(e)) {
+    e.log("faledLetter", faledLetter);
+    if (!faledLetter.includes(e)) {
+      faledLetter += e;
+      countGuess();
+      checkIncorrectGuess();
     }
   }
+
+  checkCorrectGuess();
+};
+
+document.addEventListener("keydown", function (e) {
+  if (abc.includes(e.key)) {
+    checkRealKey(e.key);
+  }
+});
+
+keyboard.addEventListener("click", (e) => {
+  checkVirtualKey(e);
 });
