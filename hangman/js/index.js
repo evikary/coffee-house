@@ -175,7 +175,6 @@ const checkRealKey = (e) => {
   });
 
   if (!word.includes(e)) {
-    e.log("faledLetter", faledLetter);
     if (!faledLetter.includes(e)) {
       faledLetter += e;
       countGuess();
