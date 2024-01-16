@@ -168,6 +168,10 @@ const checkRealKey = (e) => {
   userLetters += e;
   const abcVirtual = document.querySelectorAll(".key");
 
+  if (count < 1 || !secret.includes("_")) {
+    return;
+  }
+
   abcVirtual.forEach((item) => {
     if (item.textContent === e) {
       item.classList.add("disabled");

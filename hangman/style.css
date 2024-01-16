@@ -278,7 +278,7 @@ h3 {
     margin: auto;
     display: flex;
     flex-direction: column;
-    column-gap: 10%;
+    column-gap: 5%;
   }
 
   .left-section {
@@ -433,7 +433,7 @@ h3 {
     margin: auto;
     display: flex;
     flex-direction: column;
-    column-gap: 10%;
+    column-gap: 5%;
   }
 
   .left-section {
