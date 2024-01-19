@@ -1,5 +1,13 @@
 .wrapper {
-    width: $content-width;
-    padding: 0 40px;
-    margin: auto;
+  width: $content-width;
+  padding: 0 40px;
+  margin: auto;
+
+  @include media-laptop {
+    width: 100%;
+  }
+
+  @include media-mobile {
+    padding: 0 16px;
+  }
 }

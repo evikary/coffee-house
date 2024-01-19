@@ -1,3 +1,12 @@
 %transition {
-    transition: all .3s;
+  transition: all 0.3s;
+}
+
+%humburger-line {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  border-radius: 5px;
+  background-color: $color-border-dark;
 }

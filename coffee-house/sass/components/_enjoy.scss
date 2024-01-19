@@ -1,53 +1,89 @@
 .enjoy {
-    padding-top: 20px;
-    background: $color-bg-body;
+  padding-top: 20px;
+  background: $color-bg-body;
+}
+
+.enjoy__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 40px;
+  object-fit: cover;
 }
 
 .enjoy__bg {
-    padding: 100px 100px;
-    width: 100%;
-    height: 644px;
-    background-image: url('../assets/enjoy/enjoy-bg.jpg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    border-radius: 40px;
+  width: 100%;
+  max-height: 644px;
+  min-height: 644px;
+  position: relative;
+  border-radius: 40px;
+
+  @media (max-width: 500px) {
+    max-height: 552px;
+    min-height: 552px;
+  }
 }
 
 .enjoy__content {
-    width: 530px;
+  width: 530px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+
+  @include media-laptop {
+    left: 60px;
+  }
+
+  @include media-mobile {
+    width: 316px;
+    top: 60px;
+    left: 16px;
+  }
 }
 
 .enjoy__text {
-    padding: 40px 0;
-    color: $color-text-light;
-    @include font(16px, 150%, normal, 400);
+  padding: 40px 0;
+  color: $color-text-light;
+  @include font(16px, 150%, normal, 400);
 }
 
 .enjoy__button {
-    width: 200px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    background: $color-bg-body;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 600);
-    border: none;
-    text-decoration: none;
-    @extend %transition;
-    cursor: pointer;
+  width: 200px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background: $color-bg-body;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 600);
+  border: none;
+  text-decoration: none;
+  @extend %transition;
+  cursor: pointer;
+
+  @include media-laptop {
+    cursor: unset;
+  }
 }
 
 .enjoy__button .cup {
-    margin-left: -18px;
-    opacity: 0;
-    transition: 1s;
+  margin-left: -18px;
+  opacity: 0;
+  transition: 1s;
+
+  @include media-laptop {
+    margin-left: 8px;
+    opacity: 1;
+  }
 }
 
 .enjoy__button:hover .cup {
-    margin-left: 8px;
-    opacity: 1;
-    transition: 1s;
+  margin-left: 8px;
+  opacity: 1;
 }

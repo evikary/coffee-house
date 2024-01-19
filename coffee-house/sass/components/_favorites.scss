@@ -1,95 +1,173 @@
 .favourites {
-    padding: 100px 0;
-    background: $color-bg-body;
+  padding: 100px 0;
+  background: $color-bg-body;
 }
 
 .favorites__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.favourites__slider {
-    margin-top: 40px;
-    padding: 0 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 40px;
+.favourites__slider-container {
+  width: 100%;
+  margin-top: 40px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+
+  @include media-mobile {
+    padding: 0;
+  }
+}
+
+.slider-window {
+  overflow: hidden;
+  width: 1152px;
+
+  @include media-laptop {
+    width: 688px;
+  }
+
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+.slider-track {
+  display: flex;
+  column-gap: 25px;
+  @extend %transition;
 }
 
 .favorites__title {
-    letter-spacing: .3px;
+  letter-spacing: 0.3px;
+
+  @include media-laptop {
+    text-align: center;
+  }
 }
 
 .favourites__slide {
-    width: 1152px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-width: 100%;
+  flex-basis: 1152px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-laptop {
+    flex-basis: 488px;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 550px) {
+    flex-basis: 348px;
+    flex-grow: 1;
+  }
 }
 
 .favorites__img {
-    margin-bottom: 20px;
-    width: 480px;
-    height: 480px;
+  margin-bottom: 20px;
+  width: 480px;
+  height: 480px;
+
+  @media (max-width: 550px) {
+    width: 348px;
+    height: 348px;
+  }
 }
 
 .favourites__text {
-    margin: 16px 0;
-    color: $color-text-dark;
-    @include font(16px, 150%, normal, 400);
-    text-align: center;
+  max-width: 480px;
+  margin: 16px 0;
+  color: $color-text-dark;
+  @include font(16px, 150%, normal, 400);
+  text-align: center;
+
+  @include media-mobile {
+    max-width: 348px;
+  }
 }
 
 .favourites__box {
-    margin-top: 40px;
-    display: flex;
-    column-gap: 12px;
+  margin-top: 40px;
+  display: flex;
+  column-gap: 12px;
+}
+
+.line-wrapper {
+  width: 40px;
+  height: 4px;
+  background-color: $color-border-light;
+  border-radius: 100px;
 }
 
 .line {
-    width: 40px;
-    height: 4px;
-    background-color: $color-border-light;
-
-    &_active {
-        background-color: $color-border-dark;
-    }
+  width: 0;
+  height: 4px;
+  border-radius: 100px;
+  background-color: $color-border-dark;
 }
 
 .left-arrow {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/favourites/arrow-left.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-dark;
-    @extend %transition;
-    cursor: pointer;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/favourites/arrow-left.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+  @extend %transition;
+  cursor: pointer;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .left-arrow:hover {
-    border: 1px solid $color-bg-container;
-    background: $color-bg-container;
-    background-image: url('../assets/favourites/arrow-left-hover.svg');
+  border: 1px solid $color-bg-container;
+  background: $color-bg-container;
+  background-image: url("../assets/favourites/arrow-left-hover.svg");
+  @include icon;
+
+  @include media-laptop {
+    border: 1px solid $color-border-dark;
+    background: transparent;
+    background-image: url("../assets/favourites/arrow-left.svg");
     @include icon;
+  }
 }
 
 .right-arrow {
-    width: 60px;
-    height: 60px;
-    background-image: url('../assets/favourites/arrow-right.svg');
-    @include icon;
-    border-radius: 100px;
-    border: 1px solid $color-border-dark;
-    @extend %transition;
-    cursor: pointer;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/favourites/arrow-right.svg");
+  @include icon;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+  @extend %transition;
+  cursor: pointer;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .right-arrow:hover {
-    border: 1px solid $color-bg-container;
-    background: $color-bg-container;
-    background-image: url('../assets/favourites/arrow-right-hover.svg');
+  border: 1px solid $color-bg-container;
+  background: $color-bg-container;
+  background-image: url("../assets/favourites/arrow-right-hover.svg");
+  @include icon;
+
+  @include media-laptop {
+    border: 1px solid $color-border-dark;
+    background: transparent;
+    background-image: url("../assets/favourites/arrow-right.svg");
     @include icon;
+  }
 }
